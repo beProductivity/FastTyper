@@ -1,7 +1,7 @@
 "use client"
 import { useEffect } from 'react';
-import * as THREE from 'three'
-import ThreeScene from '@/components/3d/ThreeScene';
+import RotatingSquareCanvas from '@/components/3d/ThreeScene';
+import "./page.module.scss";
 
 export default function Home() {
 
@@ -10,9 +10,11 @@ export default function Home() {
   }, [])
 
   return (
-    <main className='test'>
-      <ThreeScene />
-      Hello!
-    </main>
+    <>
+      <main className='test'>
+        <h1>test</h1>
+      </main>
+      <RotatingSquareCanvas widthPercent={100} heightPercent={40}/>
+    </>
   )
 }

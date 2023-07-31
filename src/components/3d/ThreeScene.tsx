@@ -3,7 +3,12 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
-const RotatingSquareCanvas = () => {
+interface RotatingSquareCanvasParams {
+  widthPercent: number;
+  heightPercent: number;
+}
+
+const RotatingSquareCanvas = ({ widthPercent, heightPercent }: RotatingSquareCanvasParams) => {
   const canvasRef = useRef();
 
   useEffect(() => {
@@ -20,9 +25,9 @@ const RotatingSquareCanvas = () => {
     directionalLight.position.set(1, 2, 3);
     scene.add(directionalLight);
 
-    // Calculate the aspect ratio of the canvas based on the window size
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    // Calculate the aspect ratio of the canvas based on the percentage size
+    const width = (widthPercent / 100) * window.innerWidth;
+    const height = (heightPercent / 100) * window.innerHeight;
     const aspectRatio = width / height;
 
     // Adjust the camera to match the aspect ratio
@@ -43,28 +48,36 @@ const RotatingSquareCanvas = () => {
       // Move the model to the center of the scene
       model.position.sub(center);
 
+      // Rotate model at initialization
+      const initialRotationZValue: number = model.rotation.z + Math.PI * 0.05
+      const initialRotationXValue: number = model.rotation.x - Math.PI * 0.1
+      model.rotation.set(initialRotationXValue, model.rotation.y, initialRotationZValue)
+
       // Set up rotation controls for the loaded model
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.enableDamping = true;
       controls.enableZoom = false; // Disable zooming
       controls.enablePan = false; // Disable panning
       controls.mouseButtons = {
-        LEFT: THREE.MOUSE.ROTATE,
+        LEFT: THREE.MOUSE.ROTATE, // Allow left mouse button rotation
         MIDDLE: THREE.MOUSE.DOLLY,
         RIGHT: null, // Disable right mouse button movement
       };
-      controls.rotateSpeed = 0.2;
+      controls.enableRotate = true; // Enable rotation
+      controls.enableRotate = true;
+      controls.rotateSpeed = 0.005;
+      controls.maxPolarAngle = Math.PI / 2; // Limit vertical rotation (up and down)
       controls.target.set(0, 0, 0);
       controls.update();
     });
 
     // Position the camera to view the centered model
-    camera.position.set(0, 0, 300);
+    camera.position.set(0, 0, 250);
 
     // Handle window resize to update aspect ratio and canvas size
     const handleWindowResize = () => {
-      const newWidth = window.innerWidth;
-      const newHeight = window.innerHeight;
+      const newWidth = (widthPercent / 100) * window.innerWidth;
+      const newHeight = (heightPercent / 100) * window.innerHeight;
       const newAspectRatio = newWidth / newHeight;
 
       camera.aspect = newAspectRatio;
@@ -90,7 +103,7 @@ const RotatingSquareCanvas = () => {
       window.removeEventListener('resize', handleWindowResize);
       renderer.dispose();
     };
-  }, []);
+  }, [widthPercent, heightPercent]);
 
   return <canvas ref={canvasRef} />;
 };
