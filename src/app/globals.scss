@@ -1,6 +1,6 @@
-@import "./styles/variables";
-@import "./styles/mixins";
-@import "./styles/fonts";
+@import "../styles/fonts";
+@import "../styles/mixins";
+@import "../styles/fonts";
 
 * {
     padding: 0;
@@ -8,7 +8,9 @@
     box-sizing: border-box;
 }
 
-html, body, #__next {
+html,
+body,
+#__next {
     width: 100vw;
     height: 100vh;
 }

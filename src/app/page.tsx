@@ -1,8 +1,18 @@
+"use client"
+import { useEffect } from 'react';
+import * as THREE from 'three'
+import ThreeScene from '@/components/3d/ThreeScene';
+
 export default function Home() {
-    return (
-      <main >
+
+  useEffect(() => {
+
+  }, [])
+
+  return (
+    <main className='test'>
+      <ThreeScene />
       Hello!
-      </main>
-    )
-  }
-  
+    </main>
+  )
+}
