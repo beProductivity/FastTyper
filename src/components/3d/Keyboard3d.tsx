@@ -6,9 +6,10 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 interface RotatingSquareCanvasParams {
   widthPercent: number;
   heightPercent: number;
+  backgroundColor: string;
 }
 
-const RotatingSquareCanvas = ({ widthPercent, heightPercent }: RotatingSquareCanvasParams) => {
+const RotatingSquareCanvas = ({ widthPercent, heightPercent, backgroundColor }: RotatingSquareCanvasParams) => {
   const canvasRef = useRef();
   const modelRef = useRef();
   const previousMouseXRef = useRef(0); // Store the previous mouseX position
@@ -36,8 +37,9 @@ const RotatingSquareCanvas = ({ widthPercent, heightPercent }: RotatingSquareCan
   useEffect(() => {
     // Three.js setup
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(sceneColor); // Set the background color
-
+    const hexBackgroundColor = parseInt(backgroundColor.replace(/^#/, ''), 16);
+    scene.background = new THREE.Color(hexBackgroundColor); // Set the background color
+    
     // Add an ambient light with higher intensity to remove shading
     const ambientLight = new THREE.AmbientLight(ambientLightColor, ambientLightIntensity);
     scene.add(ambientLight);
