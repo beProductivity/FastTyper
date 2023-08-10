@@ -14,7 +14,7 @@ export default function Home() {
       <main className='test'>
         <h1>test</h1>
       </main>
-      <RotatingSquareCanvas widthPercent={100} heightPercent={40} backgroundColor='#F0F0F0'/>
+      {/* <RotatingSquareCanvas widthPercent={100} heightPercent={40} backgroundColor='#F0F0F0'/> */}
     </>
   )
 }
