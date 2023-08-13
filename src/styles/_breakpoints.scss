@@ -1,0 +1,15 @@
+$breakpoints-down: (
+  small: 360px,
+  xmedium: 575px,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1280px,
+);
+
+$breakpoints-up: (
+  small: 359px,    // 360px - 1px
+  xmedium: 574px,  // 575px - 1px
+  medium: 767px,   // 768px - 1px
+  large: 1023px,   // 1024px - 1px
+  xlarge: 1279px,  // 1280px - 1px
+);

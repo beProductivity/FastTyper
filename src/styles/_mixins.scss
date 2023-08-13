@@ -1,0 +1,58 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin square-size($val) {
+    width: $val;
+    height: $val;
+}
+
+@mixin font-style($font-size: 16px, $font-weight: normal, $font-family: Arial) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-family: $font-family;
+}
+
+@mixin reset-input {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    
+    &:focus {
+      box-shadow: none;
+      border: none;
+    }
+}
+
+@mixin reset-button {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+@mixin breakpoint-up($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+  }
+
+@mixin breakpoint-down($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+        }
+    }
+}
+  

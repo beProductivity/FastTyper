@@ -1,7 +1,7 @@
 "use client"
 import { useEffect } from 'react';
 import RotatingSquareCanvas from '@/components/3d/Keyboard3d';
-import "./page.module.scss";
+import "./page.scss";
 
 export default function Home() {
 
