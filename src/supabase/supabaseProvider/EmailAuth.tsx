@@ -21,9 +21,19 @@ class EmailAuth {
         console.log("zalogowano")
     }
 
+    discord = async () => {
+        const { user, error } = await SupaBaseClient.auth.signInWithOAuth({
+            provider: 'discord'
+        })
+        if (error) throw error;
+    }
+
     constructor(email: string, password: string) {
         this.emailInput = email;
         this.passwordInput = password;
+
+        console.log("email: '" + email + "'");
+        console.log("password: '" + password + "'");
     }
 }
 
