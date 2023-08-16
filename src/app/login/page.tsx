@@ -1,21 +1,21 @@
 'use client'
 import { useState } from 'react';
 import EmailAuth from '@/supabase/auth/EmailAuth';
+import SocialAuth from '@/supabase/auth/SocialAuth';
 import { useRouter } from 'next/router';
 export default function Home() {
   const [login, setLogin] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   
   const LoginUser =  () => {
-    const authClient = new EmailAuth(login as string, password as string)
-    console.log(login, password)
-    authClient.login();
+    const emailAuthClient = new EmailAuth(login as string, password as string)
+    emailAuthClient.login();
   }
 
   const LoginByDiscord = () => {
-    const authClient = new EmailAuth(login as string, password as string)
+    const discordAuthClient = new SocialAuth(login as string, password as string)
    
-    authClient.discord()
+    discordAuthClient.discord();
   }
     return (
       <main >

@@ -1,7 +1,8 @@
 import SupabaseDB from "../supabase";
 
 export default function checkSession() {
-    let isLogin:boolean = false;
+    let isLogin: boolean = false;
+    
     SupabaseDB.auth.getSession().then((session) => {
         if(session.data.session != null)
         {
