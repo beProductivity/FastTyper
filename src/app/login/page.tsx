@@ -1,8 +1,7 @@
 'use client'
 import { useState } from 'react';
-import EmailAuth from '@/supabase/supabaseProvider/EmailAuth';
-
-
+import EmailAuth from '@/supabase/auth/EmailAuth';
+import { useRouter } from 'next/router';
 export default function Home() {
   const [login, setLogin] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -10,7 +9,7 @@ export default function Home() {
   const LoginUser =  () => {
     const authClient = new EmailAuth(login as string, password as string)
     console.log(login, password)
-    authClient.login()
+    authClient.login();
   }
 
   const LoginByDiscord = () => {

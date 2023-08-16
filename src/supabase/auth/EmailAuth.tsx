@@ -1,39 +1,48 @@
-import SupaBaseClient from '../supabase';
+import SupabaseDB from '../supabase';
+
+
 
 class EmailAuth {
     private  passwordInput: string = '';
     private emailInput: string = '';
     
+    /*register from email */
     register = async () => {
-        const { error } = await SupaBaseClient.auth.signUp({
+        const { error } = await SupabaseDB.auth.signUp({
             email: this.emailInput,
             password: this.passwordInput
         })
         if (error) throw error;
     }
 
+    /*login */
     login = async () => {
-        const { error } = await SupaBaseClient.auth.signInWithPassword({
+        const { error } = await SupabaseDB.auth.signInWithPassword({
             email: this.emailInput,
             password: this.passwordInput
         });
         if (error) throw error;
-        console.log("zalogowano")
+        window.location.href ='/dashboard';
+        
     }
-
+ 
+    /*register/login from dc */
     discord = async () => {
-        const { user, error } = await SupaBaseClient.auth.signInWithOAuth({
+        const { error } = await SupabaseDB.auth.signInWithOAuth({
             provider: 'discord'
         })
+        if (error) throw error;
+    }
+
+    /*logout */
+    logout = async () => {
+        const { error } = await SupabaseDB.auth.signOut();
         if (error) throw error;
     }
 
     constructor(email: string, password: string) {
         this.emailInput = email;
         this.passwordInput = password;
-
-        console.log("email: '" + email + "'");
-        console.log("password: '" + password + "'");
     }
 }
 

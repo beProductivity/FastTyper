@@ -2,20 +2,26 @@
 import { useEffect } from 'react';
 import RotatingSquareCanvas from '@/components/3d/Keyboard3d';
 import "./page.scss";
-import SupaBaseClient from '@/supabase/supabase';
-import EmailAuth from '@/supabase/supabaseProvider/EmailAuth';
-
+import SupabaseDB from '@/supabase/supabase';
+import EmailAuth from '@/supabase/auth/EmailAuth';
+import { useRouter } from 'next/navigation';
 export default function Home() {
+  const { data: authListener } = SupabaseDB.auth.onAuthStateChange((event, session) => {
 
-  useEffect(() => {
-    const authClient = new EmailAuth('meduska@yopmail.com', '12345')
-    authClient.login()
-  }, [])
+  })
+  const router = useRouter();
+  
+
+  // useEffect(() => {
+  //   const authClient = new EmailAuth('meduska@yopmail.com', '12345')
+  //   authClient.login()
+  // }, [])
 
   return (
     <>
       <main className='test'>
         <h1>test</h1>
+        <button onClick={() => router.push('/dashboard')}>  Dashboard </button>
       </main>
       {/* <RotatingSquareCanvas widthPercent={100} heightPercent={40} backgroundColor='#F0F0F0'/> */}
     </>
