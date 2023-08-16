@@ -5,6 +5,9 @@ import "./page.scss";
 import SupabaseDB from '@/supabase/supabase';
 import EmailAuth from '@/supabase/auth/EmailAuth';
 import { useRouter } from 'next/navigation';
+import generateArrayWithSum from '@/utils/GameEngine/GenerateNumbers';
+import GenerateText from '@/utils/GameEngine/GenerateText';
+
 export default function Home() {
   const { data: authListener } = SupabaseDB.auth.onAuthStateChange((event, session) => {
 
@@ -16,6 +19,10 @@ export default function Home() {
   //   const authClient = new EmailAuth('meduska@yopmail.com', '12345')
   //   authClient.login()
   // }, [])
+
+  useEffect(() => {
+    console.log(GenerateText())
+  }, [])
 
   return (
     <>
