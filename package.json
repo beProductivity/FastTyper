@@ -20,7 +20,8 @@
     "eslint-config-next": "13.4.12",
     "next": "13.4.12",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-simple-keyboard": "^3.6.53"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.12",
