@@ -7,8 +7,8 @@ import { Component, useState, useRef, useEffect } from 'react';
 
 export default function Game()
 {
-    const [input, setInput] = useState("");
-    const [layout, setLayout] = useState("default");
+    
+    const [layout, setLayout] = useState<string>("default"); /*layout klawiatury */
     const [WriteText, setWriteText] = useState<string>("");
 
     const [displayedText, setDisplayedText] = useState<string>("demoText");
@@ -29,23 +29,23 @@ export default function Game()
       if (button === "{shift}" || button === "{lock}") handleShift();
     };
   
-    const onChangeInput = (event:any) => {
-      const input = event.target.value;
-      setInput(input);
-    };
+
 
     useEffect(() => {
         // Funkcja obsługująca zdarzenie klawiatury
         const handleKeyPress = (event: KeyboardEvent) => {
           if (event.key) {
-            setWriteText(prevWriteText => prevWriteText + event.key);
-            const targetButton = document.querySelector('[data-skbtn="' + event.key + '"]');
-            targetButton?.addEventListener('click', event => {})
-            console.log(WriteText)
+            setWriteText(prevWriteText => prevWriteText + event .key);
+            const targetButton = document.querySelector('[data-skbtn="' + event.key.toString() + '"]');
+            targetButton?.classList.add("hg-activeButton");
+            setTimeout(() => {
+              targetButton?.classList.remove("hg-activeButton");
+            }, 100);
+            
           }
         };
 
-        // Dodaj nasłuchiwanie na zdarzenie klawiatury przy montażu komponentu
+        // nasłuchiwanie na zdarzenie klawiatury przy montażu komponentu
         window.addEventListener('keydown', handleKeyPress);
     
         // Funkcja zwrotna czyszcząca nasłuchiwanie przy demontażu komponentu
