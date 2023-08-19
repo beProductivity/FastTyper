@@ -8,3 +8,71 @@ main {
         color: $GreenGlow;
     }
 }
+
+.top-left-vector {
+    width: 8.229rem !important;
+    height: 14.341rem !important;
+    transform: rotate(-11.971deg);
+    flex-shrink: 0;
+    fill: $GreenGlow;
+}
+
+.top-right-vector {
+    width: 21.467rem !important;
+    height: 17.573rem !important;
+    fill: $GreenGlow;
+}
+
+.keyboard {
+    width: 894px !important;
+    height: 593.5px !important;
+    flex-shrink: 0;
+    fill: $GreenGlow;
+}
+
+.bottomlogin, .signup {
+    @include reset-button;
+    display: flex;
+    padding: 22px 109px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 1rem;
+    background: $GreenGlow;
+    color: var(--neutral-1000, #10131B);
+    text-align: center;
+    font-family: Inter; /// add mixins
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px;
+}
+
+.text-top {
+    width: 770px;
+    height: 114px;
+    flex-shrink: 0;
+    color: var(--neutral-25, #FCFCFD);
+    text-align: center;
+    font-family: Inter; /// add mixins
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 74.5px;
+}
+
+.text-bottom {
+    width: 770px;
+    height: 51px;
+    color: var(--green-light, #96FFD1);
+    text-align: center;
+    font-family: Inter; /// add mixins
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

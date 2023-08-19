@@ -1,12 +1,45 @@
+@import "src/app/globals.scss";
+
 .navbar {
-    background-color: #333;
+    background: rgba(16, 24, 40, 0.80);
+    backdrop-filter: blur(14.5px); /* Note: backdrop-filter ma minimalne przegladarkowe wsparcie */
+    flex-shrink: 0;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-  
+    position: absolute;
+    width: 1920px;
+    height: 54px;
+    left: 0px;
+    top: 0px;
+
     .text {
-      color: #fff;
+      color: var(--neutral-50, #F9FAFB);
+      text-align: center;
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 33px; 
+    }
+
+    .log-in {
+      @include reset-button;
+      display: flex;
+      width: 9.625rem;
+      padding: 0.25rem 0.125rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625rem;
+      border-radius: 0.625rem;
+      background: $GreenGlow;
+      color: #101828;
+      text-align: center;
+      font-family: Inter;
       font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26px;
     }
   }
