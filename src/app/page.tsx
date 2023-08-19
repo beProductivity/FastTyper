@@ -6,6 +6,17 @@ import "./page.scss";
 // import SupabaseDB from '@/supabase/supabase';
 // import EmailAuth from '@/supabase/auth/EmailAuth';
 // import { useRouter } from 'next/navigation';
+import SupabaseDB from '@/supabase/supabase';
+import EmailAuth from '@/supabase/auth/EmailAuth';
+import { useRouter } from 'next/navigation';
+import generateArrayWithSum from '@/utils/GameEngine/GenerateNumbers';
+import GenerateText from '@/utils/GameEngine/GenerateText';
+import GenerateGameTextContent from '@/utils/GameEngine/GenerateGameTextContent';
+import GameTextContentParams from '@/types/GameTextContentParams'; 
+import GameTextContentLang from '@/types/Enums/GameTextContentLang';
+
+export default function Home() {
+  const { data: authListener } = SupabaseDB.auth.onAuthStateChange((event, session) => {
 
 
 export default function Home() {
@@ -14,11 +25,25 @@ export default function Home() {
   // })
   // const router = useRouter();
   
-
   // useEffect(() => {
   //   const authClient = new EmailAuth('meduska@yopmail.com', '12345')
   //   authClient.login()
   // }, [])
+
+  useEffect(() => {
+    const params: GameTextContentParams = {
+      lineAmount: 4,
+      lineLength: 50,
+      lang: GameTextContentLang.ENG
+    }
+
+    const engine = new GenerateGameTextContent(params)
+    engine.generate().then((res) => {
+      console.log(res)
+    })
+  }, [])
+
+ 
 
   return (
     <>
