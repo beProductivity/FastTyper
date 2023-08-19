@@ -1,0 +1,28 @@
+body {
+    width: 100%;
+}
+
+.typearea {
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+
+    .display_words {
+        margin: 0.4rem;
+        width: 70%;
+        height: 10rem;
+        text-align: center;
+    }
+    textarea {
+        width: 50%;
+        font-size: 2rem;
+    }
+   .keyboard {
+     width: 50%;
+     height: 20%;
+ 
+   }
+}
+
+

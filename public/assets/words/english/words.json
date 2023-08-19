@@ -1,0 +1,101 @@
+{
+    "three": [
+      "car", "dog", "cat", "sky", "red", "bus", "cup", "map", "pen", "sun",
+      "zip", "fan", "job", "top", "box", "joy", "low", "key", "joy", "man",
+      "run", "toy", "hat", "dot", "bed", "lip", "fit", "hot", "bar", "win",
+      "max", "tax", "mix", "dot", "jot", "cry", "fit", "zap", "oak", "lot",
+      "mix", "log", "joy", "wax", "nap", "rug", "mad", "tin", "leg", "pea",
+      "zap", "bug", "pen", "fax", "kit", "cot", "bug", "oak", "tag", "pot",
+      "bug", "lid", "web", "jet", "rat", "map", "wig", "lap", "gap", "lid",
+      "joy", "man", "log", "net", "pen", "rat", "tag", "cap", "bus", "tag",
+      "rug", "lip", "fit", "pot", "cat", "fan", "zip", "hot", "tap", "dot",
+      "lot", "bed", "kit", "nut", "rat", "wig", "lip", "cap", "mix", "bar",
+      "kit", "pen", "cap", "fan", "bus", "sun", "zip", "oak", "tag", "bug",
+      "pot", "car", "map", "pen", "kit", "top", "cup", "lip", "leg", "joy"
+    ],
+
+    "four": [
+        "plan", "book", "tree", "jump", "ball", "desk", "code", "ring", "fast", "star",
+        "open", "mind", "sand", "fish", "warm", "blue", "song", "park", "lock", "rain",
+        "wave", "fire", "time", "shop", "baby", "rock", "luck", "duck", "grow", "play",
+        "road", "tree", "zero", "idea", "leaf", "bake", "deep", "cool", "girl", "high",
+        "moon", "dark", "door", "gift", "film", "hero", "loud", "milk", "next", "pink",
+        "rule", "salt", "loud", "save", "tall", "vote", "wish", "zone", "year", "zoom",
+        "able", "bean", "city", "data", "echo", "face", "game", "help", "idea", "jazz",
+        "kiss", "love", "mate", "neat", "opal", "page", "quad", "race", "silk", "time",
+        "urge", "vibe", "warm", "xray", "yoga", "zest", "aura", "bend", "chat", "doze",
+        "earn", "fuzz", "gaze", "haze", "icon", "jolt", "kite", "lure", "maze", "noon",
+        "omen", "pave", "quiz", "raft", "spin", "tune", "urge", "vent", "whip", "xray",
+        "yawn", "zeal"
+      ],
+      "five": [
+        "apple", "beach", "cloud", "dream", "earth", "flame", "green", "house", "issue", "jolly",
+        "kneel", "lunch", "money", "night", "ocean", "peace", "quiet", "route", "swirl", "table",
+        "unity", "vivid", "water", "xerox", "young", "zebra", "alarm", "blend", "crisp", "dance",
+        "early", "flame", "grape", "happy", "image", "jumbo", "knife", "lemon", "money", "novel",
+        "ocean", "peace", "quick", "round", "slice", "table", "unity", "vivid", "wrist", "xerox",
+        "yield", "zebra", "angel", "blink", "candy", "drift", "every", "flask", "grain", "heart",
+        "ivory", "joker", "knots", "laser", "march", "noble", "orbit", "peace", "quiet", "raise",
+        "shine", "table", "unity", "viper", "whale", "xenon", "young", "zebra", "agile", "blend",
+        "crane", "delta", "elbow", "fable", "glare", "haste", "input", "jolly", "knock", "lemon",
+        "medal", "noble", "occur", "peach", "quick", "round", "shark", "table", "ultra", "vivid",
+        "waste", "xenon", "yacht", "zebra"
+      ], 
+
+      "six": [
+        "banana", "circle", "dazzle", "elegant", "flavor", "guitar", "honest", "island", "jigsaw", "kitten",
+        "lively", "magnet", "novice", "oxygen", "puzzle", "quaint", "rescue", "sizzle", "tricky", "unique",
+        "vortex", "wonder", "xyloph", "yellow", "zebra", "abound", "beacon", "canvas", "dabble", "effort",
+        "fickle", "grumpy", "humble", "invent", "juggle", "kettle", "lively", "muzzle", "nuzzle", "oblong",
+        "puzzle", "quaint", "random", "sizzle", "thrive", "unique", "vortex", "wobble", "xenial", "yellow",
+        "zebra", "anchor", "basket", "castle", "dabble", "effort", "fumble", "grumpy", "humble", "invent",
+        "jigsaw", "kitten", "lively", "magnet", "nuzzle", "oblong", "puzzle", "quaint", "random", "sizzle",
+        "tricky", "unique", "vortex", "wonder", "xyloph", "yellow", "zebra", "abound", "beacon", "canvas",
+        "dabble", "effort", "fickle", "grumpy", "humble", "invent", "juggle", "kettle", "lively", "magnet",
+        "novice", "oxygen", "puzzle", "quaint", "rescue", "sizzle", "tricky", "unique", "vortex", "wonder",
+        "xyloph", "yellow", "zebra"
+      ], 
+
+      "seven": [
+        "abandon", "balance", "capture", "dolphin", "exclaim", "fashion", "gallery", "harmful", "inspire", "jovial",
+        "kitchen", "liberty", "mention", "novelty", "opulent", "paradox", "quicken", "ravishing", "stumble", "thirsty",
+        "undergo", "venture", "whisper", "xyloids", "yearnful", "zealous", "abandon", "balance", "capture", "dolphin",
+        "exclaim", "fashion", "gallery", "harmful", "inspire", "jovial", "kitchen", "liberty", "mention", "novelty",
+        "opulent", "paradox", "quicken", "ravishing", "stumble", "thirsty", "undergo", "venture", "whisper", "xyloids",
+        "yearnful", "zealous", "abandon", "balance", "capture", "dolphin", "exclaim", "fashion", "gallery", "harmful",
+        "inspire", "jovial", "kitchen", "liberty", "mention", "novelty", "opulent", "paradox", "quicken", "ravishing",
+        "stumble", "thirsty", "undergo", "venture", "whisper", "xyloids", "yearnful", "zealous", "abandon", "balance",
+        "capture", "dolphin", "exclaim", "fashion", "gallery", "harmful", "inspire", "jovial", "kitchen", "liberty",
+        "mention", "novelty", "opulent", "paradox", "quicken", "ravishing", "stumble", "thirsty", "undergo", "venture",
+        "whisper", "xyloids", "yearnful", "zealous"
+      ],
+
+      "eight": [
+        "abstract", "boundary", "champion", "daughter", "essential", "frustrate", "generate", "happiness", "identity", "junction",
+        "knowledge", "landscape", "meditate", "notebook", "operation", "perceive", "quantity", "radiance", "struggle", "telephone",
+        "ultimate", "velocity", "wanderer", "xenolith", "yearning", "zeppelin", "abstract", "boundary", "champion", "daughter",
+        "essential", "frustrate", "generate", "happiness", "identity", "junction", "knowledge", "landscape", "meditate", "notebook",
+        "operation", "perceive", "quantity", "radiance", "struggle", "telephone", "ultimate", "velocity", "wanderer", "xenolith",
+        "yearning", "zeppelin", "abstract", "boundary", "champion", "daughter", "essential", "frustrate", "generate", "happiness",
+        "identity", "junction", "knowledge", "landscape", "meditate", "notebook", "operation", "perceive", "quantity", "radiance",
+        "struggle", "telephone", "ultimate", "velocity", "wanderer", "xenolith", "yearning", "zeppelin", "abstract", "boundary",
+        "champion", "daughter", "essential", "frustrate", "generate", "happiness", "identity", "junction", "knowledge", "landscape",
+        "meditate", "notebook", "operation", "perceive", "quantity", "radiance", "struggle", "telephone", "ultimate", "velocity",
+        "wanderer", "xenolith", "yearning", "zeppelin"
+      ],
+
+      "nine": [
+        "abundance", "beautiful", "celebrate", "dangerous", "education", "frustrate", "gratitude", "harmonize", "influence", "jubilance",
+        "knowledge", "landscape", "meditate", "notebook", "operation", "perceive", "quantity", "radiance", "struggle", "telephone",
+        "ultimate", "velocity", "wanderer", "xenolith", "yearning", "zeppelin", "abundance", "beautiful", "celebrate", "dangerous",
+        "education", "frustrate", "gratitude", "harmonize", "influence", "jubilance", "knowledge", "landscape", "meditate", "notebook",
+        "operation", "perceive", "quantity", "radiance", "struggle", "telephone", "ultimate", "velocity", "wanderer", "xenolith",
+        "yearning", "zeppelin", "abundance", "beautiful", "celebrate", "dangerous", "education", "frustrate", "gratitude", "harmonize",
+        "influence", "jubilance", "knowledge", "landscape", "meditate", "notebook", "operation", "perceive", "quantity", "radiance",
+        "struggle", "telephone", "ultimate", "velocity", "wanderer", "xenolith", "yearning", "zeppelin", "abundance", "beautiful",
+        "celebrate", "dangerous", "education", "frustrate", "gratitude", "harmonize", "influence", "jubilance", "knowledge", "landscape",
+        "meditate", "notebook", "operation", "perceive", "quantity", "radiance", "struggle", "telephone", "ultimate", "velocity",
+        "wanderer", "xenolith", "yearning", "zeppelin"
+      ]
+  }
+  
