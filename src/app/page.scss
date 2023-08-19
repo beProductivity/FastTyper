@@ -1,12 +1,41 @@
 @import "./globals.scss";
 
 main {
-    height: 60%;
+    width: 100vw;
+    height: 100vh;
+    @include flex-center;
+    position: relative;
+}
 
-    h1 {
-        @include font-style(2rem, bold, $Inter);
-        color: $GreenGlow;
+.vector-layer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+    position: absolute;
+
+        &:nth-child(2) {
+            right: 0;
+        }
     }
+}
+
+.middle-container {
+    width: fit-content;
+    height: fit-content;
+    @include flex-center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.middle-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .top-left-vector {
@@ -33,10 +62,10 @@ main {
 .bottomlogin, .signup {
     @include reset-button;
     display: flex;
-    padding: 22px 109px;
     justify-content: center;
+    width: 324px;
+    height: 86px;
     align-items: center;
-    gap: 10px;
     border-radius: 1rem;
     background: $GreenGlow;
     color: var(--neutral-1000, #10131B);

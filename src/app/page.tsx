@@ -1,5 +1,5 @@
 "use client"
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import RotatingSquareCanvas from '@/components/3d/Keyboard3d';
 import Image from 'next/image';
 import "./page.scss";
@@ -14,9 +14,6 @@ import GenerateText from '@/utils/GameEngine/GenerateText';
 import GenerateGameTextContent from '@/utils/GameEngine/GenerateGameTextContent';
 import GameTextContentParams from '@/types/GameTextContentParams'; 
 import GameTextContentLang from '@/types/Enums/GameTextContentLang';
-
-export default function Home() {
-  const { data: authListener } = SupabaseDB.auth.onAuthStateChange((event, session) => {
 
 
 export default function Home() {
@@ -47,27 +44,38 @@ export default function Home() {
 
   return (
     <>
+    <main>
+      <div className='vector-layer'>
       <Image src={'/vector-topLeft.svg'} alt={'topRightVector'} width={100} height={100} className='top-left-vector'/>
       <Image src={'/vector-topRight.svg'} alt={'topRightVector'} width={100} height={100} className='top-right-vector'/>
-      {/* <Image src={'/keyboard.svg'} alt={'keyboard'} width={100} height={100} className='keyboard'/> */}
-      <button className='bottomlogin'>
-        Log in
-      </button>
-
-      <button className='signup'>
-        Sign up
-      </button>
-
-      <div className='text-top'>
-        Learn to type fast
       </div>
 
-      <div className='text-bottom'>
-        |text more hoes!
-      </div>
 
-      <RotatingSquareCanvas widthPercent={100} heightPercent={40} backgroundColor='#1C1B22'/>
+        {/* <Image src={'/keyboard.svg'} alt={'keyboard'} width={100} height={100} className='keyboard'/> */}
+        <div className='middle-container'>
+          
+          <div className='text-top'>
+            Learn to type fast
+          </div>
 
+          <div className='text-bottom'>
+            |text more hoes!
+          </div>
+
+          <div className='middle-buttons'>
+
+            <button className='bottomlogin'>
+              Log in
+            </button>
+
+            <button className='signup'>
+              Sign up
+            </button>
+
+          </div>
+        </div>
+        <RotatingSquareCanvas widthPercent={25} heightPercent={25} backgroundColor='#1C1B22'/>
+    </main>
     </>
   )
 }
