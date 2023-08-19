@@ -40,8 +40,6 @@ export default function Home() {
     })
   }, [])
 
- 
-
   return (
     <>
     <main>
@@ -49,7 +47,6 @@ export default function Home() {
       <Image src={'/vector-topLeft.svg'} alt={'topRightVector'} width={100} height={100} className='top-left-vector'/>
       <Image src={'/vector-topRight.svg'} alt={'topRightVector'} width={100} height={100} className='top-right-vector'/>
       </div>
-
 
         {/* <Image src={'/keyboard.svg'} alt={'keyboard'} width={100} height={100} className='keyboard'/> */}
         <div className='middle-container'>
