@@ -3,16 +3,16 @@
 import RotatingSquareCanvas from '@/components/3d/Keyboard3d';
 import Image from 'next/image';
 import "./page.scss";
-import SupabaseDB from '@/supabase/supabase';
-import EmailAuth from '@/supabase/auth/EmailAuth';
-import { useRouter } from 'next/navigation';
+// import SupabaseDB from '@/supabase/supabase';
+// import EmailAuth from '@/supabase/auth/EmailAuth';
+// import { useRouter } from 'next/navigation';
 
 
 export default function Home() {
-  const { data: authListener } = SupabaseDB.auth.onAuthStateChange((event, session) => {
+  // const { data: authListener } = SupabaseDB.auth.onAuthStateChange((event, session) => {
 
-  })
-  const router = useRouter();
+  // })
+  // const router = useRouter();
   
 
   // useEffect(() => {
@@ -25,7 +25,7 @@ export default function Home() {
       <Image src={'/vector-topLeft.svg'} alt={'topRightVector'} width={100} height={100} className='top-left-vector'/>
       <Image src={'/vector-topRight.svg'} alt={'topRightVector'} width={100} height={100} className='top-right-vector'/>
       {/* <Image src={'/keyboard.svg'} alt={'keyboard'} width={100} height={100} className='keyboard'/> */}
-      <button className='login'>
+      <button className='bottomlogin'>
         Log in
       </button>
 
