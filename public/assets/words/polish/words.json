@@ -1,0 +1,78 @@
+{
+    "three": [
+        "boa", "kij", "dum", "tak", "łza",
+        "nie", "sąd", "pyk", "huk", "dym",
+        "wid", "łąc", "koń", "jęz", "kot",
+        "nos", "żal", "łuk", "brz", "róg",
+        "sos", "bór", "cyk", "dąb", "emir",
+        "fuks", "graf", "heks", "inż", "jog",
+        "kąt", "luz", "mój", "nów", "ośm",
+        "pył", "quiz", "ryś", "szk", "tak",
+        "uży", "vów", "wód", "xyz"
+    ],
+
+    "four": [
+        "domu", "okoń", "gras", "woda", "błot", "noga", "lasy", "młot", "pier", "rzek", "słoń", "most", "bark",
+        "samo", "wies", "kote", "pies", "ryżu", "płyt", "ruch", "sama", "czas", "cent", "muza", "kura", "suki",
+        "skór", "dzie", "płat", "pali", "traw", "baba", "rama", "świt", "śnie", "ból", "zły", "czar", "chłód",
+        "nów", "łuk", "dół", "liść", "grad"
+    ],
+
+    "five": [
+        "domem", "około", "laser", "piano", "kotek",
+        "różne", "łódź", "słowo", "trawa", "łabędź",
+        "chmura", "szkło", "butelka", "serce", "płatek",
+        "krewa", "wódka", "ziemia", "wiersz", "morze",
+        "piasek", "wieża", "nocą", "kotki", "okno",
+        "słońce", "kamień", "rękaw", "deska", "krzesło",
+        "muszą", "taniec", "łóżko", "fotel", "plecy",
+        "końce", "trójkąt", "jaskółka", "czapka", "droga"
+    ],
+
+    "six": [
+        "domowy", "okołoń", "lasery", "pianof", "koteki",
+        "różnej", "łódki", "słowik", "trawka", "łabędź",
+        "chmura", "szkłoś", "butelk", "serceś", "płatek",
+        "krewka", "wódkę", "ziemię", "wiersz", "morzaś",
+        "piaski", "wieżaś", "nocą", "kotków", "oknaś",
+        "słońca", "kamień", "rękawy", "deskaś", "krzesło",
+        "muszki", "taniec", "łóżecz", "fotelk", "plecy",
+        "końcem", "trójką", "jaskół", "czapka", "drogaś",
+        "kwiate", "wodaś", "brzuch", "końców", "końców",
+        "wiersz", "morzaś", "piaski", "wieżaś", "nocą",
+        "kotków", "oknaś", "słońca", "kamień"
+    ],
+
+    "seven": [
+        "szkolen", "kameleon", "kwiatowy", "magnolia", "oprawka",
+        "rzeźbion", "skalista", "tramwaje", "udziałów", "wezwanie",
+        "zamekowy", "jąkać się", "równanie", "śliwowica", "trwałość",
+        "wędrownik", "żartobliwy", "bogactwo", "krokodyl", "dobrym",
+        "filizanka", "głosiciel", "harpunowy", "inżynier", "jaskrawy",
+        "królestwo", "lampiony", "motywacja", "nurtujący", "obecność",
+        "przewóz", "quintet", "różdżka", "szybownia", "tęsknota",
+        "uwięziony", "wspólnik", "xylofon", "yacht", "zębatka",
+        "fajerwerk", "gazociąg", "hologram", "iście", "jęczmień",
+        "kameleon", "łamistrajk", "miłość", "nasturcja", "ocean",
+        "przyjemny", "quilling", "rokoko", "ścierwo", "tężyzna",
+        "układanka", "vademecum", "wierszownik", "xyz"
+    ],
+    
+    "eight": [
+        "akwarium", "basenowy", "cytrynowy", "dzwonkowy", "ekstrakt",
+        "fabryka", "gazetowy", "hektarów", "instrument", "jarmarków",
+        "kotwicowy", "łabędzie", "magnolia", "nurtujący", "oktalony",
+        "przyjęcie", "kwiecisty", "remontowy", "smoczkowy", "trakcyjny",
+        "uczciwy", "wieśniak", "xyzowaty", "yellow", "zjazdowy",
+        "źrenicowy", "antylopa", "brzytwa", "cukrowy", "dystrykt",
+        "elektryk", "fajerant", "grzechot", "hipopotam", "inwestycja",
+        "językowy", "klawiatura", "leksykony", "muzealny", "nastolatek",
+        "odżywczy", "przybrzeże", "quadrille", "różaniec", "szympans",
+        "traktat", "układanka", "wyzwanie", "xylofon", "yacht",
+        "zegarek", "fajerwerki", "główkowanie", "hełmofon", "igliczny",
+        "językoznawca", "kameleony", "łopatkowy", "moździerz", "nawilżacz",
+        "oceanarium", "płuczka", "quilling", "rękawiczki", "sztućce",
+        "tęsknota", "ukochany", "vademecum", "woreczek", "xyzowaty"
+    ]
+
+}

@@ -28,6 +28,9 @@ export default function Navbar()
         <nav className="navbar">
             <p className="text">FastTyper</p>
             <button onClick={SwitchTheme}> Switch Theme</button>
+            <button className="log-in"> 
+                Log in
+            </button>
         </nav>
     )
 }
