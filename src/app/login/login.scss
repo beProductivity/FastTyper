@@ -28,6 +28,25 @@ main {
             border-left: 200px solid black;
         }
 
+        .vector-layer {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+
+            .stain-one {
+                position: absolute;
+                top: -10px;
+                left: 0;
+            }
+            
+            .stain-two {
+                position: absolute;
+                bottom: -4px;
+                right: -100px;
+                z-index: 2;
+            }
+        }
+
         .wrapper {
             @include flex-center;
             height: 100vh;
@@ -64,7 +83,7 @@ main {
                         font-size: 24px;
                         line-height: 33px;
                         margin-left: 0.3rem;
-                        
+                        color: #000;
                     }
                 }
 
@@ -91,6 +110,7 @@ main {
                         font-size: 24px;
                         line-height: 33px;
                         margin-left: 0.3rem;
+                        color: #000;
                     }
                 }
 
@@ -130,6 +150,7 @@ main {
                     span {
                         color: $PureGray;
                         text-transform: uppercase;
+                        font-weight: bold;
                     }
                 }
 
@@ -149,6 +170,7 @@ main {
                         font-style: normal;
                         font-weight: 600;
                         border-radius: 12px;
+                        color: #000;
                     }
                 }
 

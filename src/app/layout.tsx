@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang={params.lang}>
       <body>
         <Providers>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
         </Providers>
       </body>
