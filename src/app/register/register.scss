@@ -1,0 +1,198 @@
+@import '../../app/globals.scss';
+
+main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    .shape {
+        background-color: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30vw;
+        min-width: 500px;
+        height: 100vh;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -200px;
+            width: 0;
+            height: 0;
+            z-index: 1;
+            border-bottom: 100vh solid transparent;
+            border-right: 200px solid black;
+        }
+
+        .wrapper {
+            @include flex-center;
+            height: 100vh;
+            width: 30vw;
+            min-width: 400px;
+            .content {
+                display: flex;
+                flex-direction: column;
+                z-index: 100;
+                &__heading {
+                    line-height: 50.5px;
+                    @include font-style(48, 600, $Inter);
+                    color: white;
+                    margin-bottom: 3rem;
+                }
+
+                &__login {
+                    max-width: 400px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border-radius: 2rem;
+                    padding: 0.6rem 0.8rem;
+                    background-color: $WhitnessBackround;
+                    margin-bottom: 2rem;
+                    
+                    &--input {
+                        @include reset-input;
+                        height: 100%;
+                        padding: 0.25rem;
+                        font-family: $Inter;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 33px;
+                        margin-left: 0.3rem;
+                        
+                    }
+                }
+
+                &__password {
+                    max-width: 400px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 0.6rem 0.8rem;
+                    border-radius: 2rem;
+                    background-color: $WhitnessBackround;
+                    margin-bottom: 1rem;
+
+                    &--locker {
+                        display: flex;
+                        padding: 0.25rem;
+                        cursor: pointer;
+                    }
+
+                    &--input {
+                        @include reset-input;
+                        height: 100%;
+                        padding: 0.25rem;
+                        font-size: 24px;
+                        line-height: 33px;
+                        margin-left: 0.3rem;
+                    }
+                }
+
+                &__forgot-password {
+                    color: white;
+                    display: flex;
+                    justify-content: end;
+                    margin-bottom: 20px;
+
+                    p {
+                        font-family: $Inter;
+
+                        span {
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                &__signup-btn {
+                    @include reset-button;
+                    background-color: $NeonGreen;
+                    border-radius: 12px;
+                    max-width: 400px;
+                    padding: 20px 0px;
+                    color: $DarkThemeBackground;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+
+                &__or {
+                    @include flex-center;
+                    font-family: $Inter;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    
+                    span {
+                        color: $PureGray;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &__login-buttons {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    margin-bottom: 20px;
+                    
+
+                    button {
+                        @include reset-button;
+                        background-color: $PureWhite;
+                        width: 400px;
+                        padding: 20px 0px;
+                        font-family: Inter;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        border-radius: 12px;
+                    }
+                }
+
+                &__sign-in {
+                    display: flex;
+                    justify-content: end;
+
+                    p {
+                        color: $WhitnessBackround;
+                        font-family: $Inter;
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        .decorationShape {
+            position: absolute;
+            z-index: 20;
+            filter: drop-shadow(0px 0px 10px $NeonGreen);
+            
+            
+        }
+        #decor1 {
+                right: 0;
+                bottom: 0;
+            }
+
+        #decor2 {
+            top: -2rem;
+            left: -5vw; 
+        }
+    }
+
+    .bg-image {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("../../images/chad.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: center;
+    }
+}
