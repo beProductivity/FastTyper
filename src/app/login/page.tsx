@@ -54,7 +54,7 @@ export default function Home() {
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 7.5V10.5H6C4.93165 10.5 4 11.2764 4 12.3333V20.6667C4 21.7236 4.93165 22.5 6 22.5H18C19.0684 22.5 20 21.7236 20 20.6667V12.3333C20 11.2764 19.0684 10.5 18 10.5H17V7.5C17 4.73858 14.7614 2.5 12 2.5C9.23858 2.5 7 4.73858 7 7.5ZM15 7.5V10.5H9V7.5C9 5.84315 10.3431 4.5 12 4.5C13.6569 4.5 15 5.84315 15 7.5ZM6 20.5V12.5H18V20.5H6ZM13 16.5C13 17.0523 12.5523 17.5 12 17.5C11.4477 17.5 11 17.0523 11 16.5C11 15.9477 11.4477 15.5 12 15.5C12.5523 15.5 13 15.9477 13 16.5Z" fill="black"/>
                   </svg>
                 </div>
-                <input className="content__password--input" placeholder='Password'>
+                <input className="content__password--input" type='password' placeholder='Password'>
                 </input>
                 <div className="content__password--locker">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
