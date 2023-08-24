@@ -20,6 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
+      <head>
+      </head>
       <body>
         <Providers>
           <Navbar />
