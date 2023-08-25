@@ -17,7 +17,7 @@ export default function Game()
     const [displayedText, setDisplayedText] = useState<string>("demoText");
    
     /*Change keyboard theme */
-    const ThemeKeyboardList:string[] = ['hg-theme-default', 'hg-theme-red']
+    const ThemeKeyboardList:string[] = ['hg-theme-neongreen', 'hg-theme-default', 'hg-theme-classicblack', 'hg-theme-red', 'hg-theme-aestheticwhite']
     const [themeKeyboard, setThemeKeyboard] = useState<string>()
  
 

@@ -21,10 +21,12 @@
     "next": "13.4.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-simple-keyboard": "^3.6.53"
+    "react-simple-keyboard": "^3.6.53",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.12",
+    "@types/react-slick": "^0.23.10",
     "css-loader": "^6.8.1",
     "eslint": "^8.46.0",
     "eslint-config-standard-with-typescript": "^37.0.0",

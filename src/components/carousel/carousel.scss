@@ -1,0 +1,98 @@
+@import 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css';
+@import '../../styles/_variables.scss';
+
+.swiper-container {
+  background: rgba(16, 24, 40, 0.80);
+  height: 100vh;
+}
+.empty {
+   height: 5vh;
+}
+.swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    width: 80%;
+    margin-top: 10%;
+    object-fit: cover;
+    border-radius: 2em;
+    box-shadow: 0 0 12px 1px $GreenGlow;
+  }
+
+  h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    border-bottom: 4px solid $GreenGlow;
+
+  }
+}
+
+.swiper_description {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 50%;
+  background-color: rgb(0, 0, 0, 0.7);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 10%;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.slider-arrow {
+  color: $NeonGreen;
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 5em;
+}
+
+.swiper-pagination  {
+  margin-top: 2rem;
+}
+.swiper-pagination-bullet-active {
+  background: $NeonGreen;
+}
+
+.swiper-pagination {
+  position: relative;
+ 
+  bottom: 4rem;
+}
+
+@media (min-width: 1000px) {
+  .swiper-slide {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+      width: 50%;
+      margin-top: 2%;
+      
+    }
+
+    h1 {
+      margin-top: 2rem;
+      font-size: 3rem;
+    }
+  }
+
+  .swiper_description {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 50%;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 3%;
+    border-radius: 2rem;
+    box-shadow: 0 0 12px 1px $GreenGlow;
+  }
+  
+  
+}
