@@ -17,6 +17,7 @@ export default function CarouselIndex()
          <Swiper
          initialSlide={1}
          effect={'coverflow'}
+  
          grabCursor={true}
          centeredSlides={true}
          loop={false}
