@@ -59,16 +59,16 @@
 }
 
 @mixin breakpoint-up($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-      @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @if map-has-key($breakpoints-up, $breakpoint) {
+      @media (min-width: map-get($breakpoints-up, $breakpoint)) {
         @content;
       }
     }
   }
 
 @mixin breakpoint-down($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-        @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @if map-has-key($breakpoints-down, $breakpoint) {
+        @media (max-width: map-get($breakpoints-down, $breakpoint)) {
         @content;
         }
     }
