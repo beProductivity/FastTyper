@@ -21,6 +21,7 @@ export default function CarouselIndex()
          grabCursor={true}
          centeredSlides={true}
          loop={false}
+         autoplay={true}
          slidesPerView={'auto'}
          coverflowEffect={{
            rotate: 0,
