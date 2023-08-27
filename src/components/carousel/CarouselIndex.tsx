@@ -17,10 +17,9 @@ export default function CarouselIndex()
          <Swiper
          initialSlide={1}
          effect={'coverflow'}
-  
          grabCursor={true}
          centeredSlides={true}
-         loop={false}
+         loop={true}
          autoplay={true}
          slidesPerView={'auto'}
          coverflowEffect={{
@@ -65,6 +64,7 @@ export default function CarouselIndex()
     </div>
    )
 }
+
 
 
 /*  {key: "firstImage",content: <img src={'assets/carousel-images/one.jpg'}/>}, */
