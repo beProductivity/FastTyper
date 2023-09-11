@@ -9,9 +9,10 @@ class EmailAuth {
         const {data, error } = await SupabaseDB.auth.signUp({
             email: this.emailInput,
             password: this.passwordInput
-        }).finally(()=> AddRegisterDefaultContent(data.user?.id as string))
+        })
 
         if (error) throw error;
+        AddRegisterDefaultContent("dsadsaadsdsadsadsa");
     }
 
     login = async () => {

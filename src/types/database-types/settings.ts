@@ -7,5 +7,5 @@ export interface GameSettings {
 
 export interface UserSettings {
      id: string;
-     theme_mode: string;
+     theme: string;
 }
