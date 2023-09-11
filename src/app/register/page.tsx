@@ -11,23 +11,18 @@ export default function Home() {
   const [repeatPassword, setRepeatPassword] = useState<string>("");
   const [passwordVisibility, setPasswordVisibility] = useState<Boolean>(false);
   const [confirmPasswordVisibility, setConfirmPasswordVisibility] = useState<Boolean>(false);
-
-  const LoginUser =  () => {
-    // const emailAuthClient = new EmailAuth(login as string, password as string)
-    // emailAuthClient.login();
-  }
-
-  const LoginByDiscord = () => {
-    // const discordAuthClient = new SocialAuth(login as string, password as string)
    
-    // discordAuthClient.discord();
+  const register = () => {
+    const RegisterUser = new EmailAuth(email as string, password as string);
+    RegisterUser.register();
   }
+  
     return (
       <main>
         <div className='shape'>
         <svg className="decorationShape" id='decor2' width="336" height="315" viewBox="-170 0 336 315" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M170.407 -103.067C185.854 -69.5181 175.659 -35.7422 158.358 -14.2072C141.057 7.1011 116.65 15.9418 117.577 36.1167C118.504 56.2915 145.073 87.8006 141.984 112.736C138.894 137.671 106.146 156.032 71.5439 157.846C36.9418 159.659 0.485977 145.152 -46.1651 130.644C-92.8162 116.136 -149.662 101.628 -157.077 76.9198C-164.801 52.4379 -122.784 17.9819 -77.9867 5.06096C-33.1893 -7.86003 14.6976 0.753952 40.3402 -30.5284C66.2918 -61.8108 69.6902 -132.763 91.9344 -151.578C114.179 -170.392 154.96 -136.843 170.407 -103.067Z" fill="#4AE4A0"/>
-</svg> 
+             <path d="M170.407 -103.067C185.854 -69.5181 175.659 -35.7422 158.358 -14.2072C141.057 7.1011 116.65 15.9418 117.577 36.1167C118.504 56.2915 145.073 87.8006 141.984 112.736C138.894 137.671 106.146 156.032 71.5439 157.846C36.9418 159.659 0.485977 145.152 -46.1651 130.644C-92.8162 116.136 -149.662 101.628 -157.077 76.9198C-164.801 52.4379 -122.784 17.9819 -77.9867 5.06096C-33.1893 -7.86003 14.6976 0.753952 40.3402 -30.5284C66.2918 -61.8108 69.6902 -132.763 91.9344 -151.578C114.179 -170.392 154.96 -136.843 170.407 -103.067Z" fill="#4AE4A0"/>
+         </svg> 
           <div className='wrapper'>
             <div className="content">
               <h1 className='content__heading'>
@@ -75,7 +70,7 @@ export default function Home() {
                     Need <span>Help?</span>
                   </p>
               </div>
-              <button className="content__signup-btn">
+              <button className="content__signup-btn" onClick={register}>
                 Sign up
               </button>
               <div className="content__or">

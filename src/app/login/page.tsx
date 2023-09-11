@@ -45,7 +45,7 @@ export default function Home() {
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3H21C22.1046 3 23 3.89543 23 5V19C23 20.1046 22.1046 21 21 21H3C1.89543 21 1 20.1046 1 19V5C1 3.89543 1.89543 3 3 3ZM3 9.61811V19H21V9.61853L12 14.1185L3 9.61811ZM3 7.38199L12 11.8825L21 7.38247V5H3V7.38199Z" fill="black"/>
                   </svg>
                 </div>
-                  <input className="content__login--input" placeholder='Email'>
+                  <input className="content__login--input" placeholder='Email' value={login} onChange={(e)=> setLogin(e.target.value)}>
                 </input>
               </div>
               <div className="content__password">
@@ -54,7 +54,7 @@ export default function Home() {
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 7.5V10.5H6C4.93165 10.5 4 11.2764 4 12.3333V20.6667C4 21.7236 4.93165 22.5 6 22.5H18C19.0684 22.5 20 21.7236 20 20.6667V12.3333C20 11.2764 19.0684 10.5 18 10.5H17V7.5C17 4.73858 14.7614 2.5 12 2.5C9.23858 2.5 7 4.73858 7 7.5ZM15 7.5V10.5H9V7.5C9 5.84315 10.3431 4.5 12 4.5C13.6569 4.5 15 5.84315 15 7.5ZM6 20.5V12.5H18V20.5H6ZM13 16.5C13 17.0523 12.5523 17.5 12 17.5C11.4477 17.5 11 17.0523 11 16.5C11 15.9477 11.4477 15.5 12 15.5C12.5523 15.5 13 15.9477 13 16.5Z" fill="black"/>
                   </svg>
                 </div>
-                <input className="content__password--input" type='password' placeholder='Password'>
+                <input className="content__password--input" type='password' placeholder='Password' value={password} onChange={(e)=> setPassword(e.target.value)}>
                 </input>
                 <div className="content__password--locker">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -67,7 +67,7 @@ export default function Home() {
                     Forgot <span>Password?</span>
                   </p>
               </div>
-              <button className="content__login-btn">
+              <button className="content__login-btn" onClick={LoginUser}>
                 Log in
               </button>
               <div className="content__or">

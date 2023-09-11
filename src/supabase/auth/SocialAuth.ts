@@ -1,13 +1,13 @@
 import SupabaseDB from '../supabase';
-
+import AddRegisterDefaultContent from '../POST/AddDefaultData';
 class SocialAuth {
     private  passwordInput: string = '';
     private emailInput: string = '';
 
     discord = async () => {
-        const { error } = await SupabaseDB.auth.signInWithOAuth({
+        const { data, error } = await SupabaseDB.auth.signInWithOAuth({
             provider: 'discord'
-        })
+        }).finally(()=> AddRegisterDefaultContent(""))
         if (error) throw error;
     }
 
@@ -17,4 +17,4 @@ class SocialAuth {
     }
 }
 
-export default SocialAuth
+export default SocialAuth;

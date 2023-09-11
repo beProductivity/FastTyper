@@ -20,6 +20,7 @@ export default function CarouselIndex()
          grabCursor={true}
          centeredSlides={true}
          loop={true}
+         autoplay={true}
          slidesPerView={'auto'}
          coverflowEffect={{
            rotate: 0,
@@ -63,6 +64,7 @@ export default function CarouselIndex()
     </div>
    )
 }
+
 
 
 /*  {key: "firstImage",content: <img src={'assets/carousel-images/one.jpg'}/>}, */

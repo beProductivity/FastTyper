@@ -1,15 +1,18 @@
 import SupabaseDB from '../supabase';
+import AddRegisterDefaultContent from '../POST/AddDefaultData';
 
 class EmailAuth {
     private passwordInput: string = '';
     private emailInput: string = '';
     
     register = async () => {
-        const { error } = await SupabaseDB.auth.signUp({
+        const {data, error } = await SupabaseDB.auth.signUp({
             email: this.emailInput,
             password: this.passwordInput
         })
+
         if (error) throw error;
+        AddRegisterDefaultContent("dsadsaadsdsadsadsa");
     }
 
     login = async () => {
