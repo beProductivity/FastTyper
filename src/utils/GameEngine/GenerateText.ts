@@ -1,12 +1,11 @@
 import generateArrayWithSum from "./GenerateNumbers";
 import GameTextContentParams from "@/types/GameTextContentParams";
+import words from '../words/words.json' assert {type: 'json'};
 
 async function GenerateText(gameParams: GameTextContentParams): Promise<string[]> {
     const { lineAmount, lineLength, lang } = gameParams;
     let result: string[] = [];
-
-    const threewords = await fetch('/assets/english/words.json')
-    const data = await threewords.json()
+    const data = words;
  
     for(let i = 0;i < lineAmount; i++) {
         const arrayWithWordsProtothypes: number[] = generateArrayWithSum(lineLength);
