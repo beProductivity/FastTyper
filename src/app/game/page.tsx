@@ -6,7 +6,9 @@ import { Component, useState, useRef, useEffect } from 'react';
 import GenerateGameTextContent from '@/utils/GameEngine/GenerateGameTextContent';
 import GameTextContentParams from '@/types/GameTextContentParams';
 import GameTextContentLang from '@/types/Enums/GameTextContentLang';
-
+import { Userbanner, Technicbanner } from '@/components/game';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 export default function Game()
 {
   
@@ -30,7 +32,7 @@ export default function Game()
     /*To Word system */
     const [wordCounter, setWordCounter] = useState<number>(0);
     const [AllWords, setAllWords] = useState<string[]>([]);
-    const TxtContent = new GenerateGameTextContent({lineAmount: 12, lineLength: 4, lang: GameTextContentLang.ENG});   
+    const TxtContent = new GenerateGameTextContent({lineAmount: 8, lineLength: 3, lang: GameTextContentLang.ENG});   
     
 
     
@@ -106,12 +108,13 @@ export default function Game()
       }, []);
 
       useEffect(()=> {
-        if(WriteText === displayedText)
+        if(WriteText === displayedText && wordCounter != AllWords[0].length)
         {
-          setWordCounter(wordCounter+1);
+          setWordCounter(wordCounter+ 1);
           setDisplayedText(AllWords[0][wordCounter]);
           setWriteText("")
-        }
+        } 
+        
       }, [WriteText])
 
       const StartGame = async () => {
@@ -125,7 +128,7 @@ export default function Game()
         setGameIsStarted(true);
         console.log(AllWords);
         setWordCounter(0);
-        setDisplayedText(AllWords[0][wordCounter]);
+        setDisplayedText(AllWords[0][0]);
         
       }
 
@@ -135,10 +138,15 @@ export default function Game()
       }, 10)
     
     return(
-    <div>
-        <div className='typearea'> 
+    <div className='screen'>
+       <div className='game'> 
+        <span className='hr'/>
+        <Userbanner/>
+        <div className='empty-sphere'> &nbsp;</div>
         <div className='display_words'>
-            <h1>{displayedText}</h1>
+            {GameIsStarted 
+              ?<h1>{displayedText}</h1>
+              :<button onClick={StartGame} className='StartButton'><FontAwesomeIcon icon={faPlay} /> START GAME</button>}
         </div>
            <textarea defaultValue={WriteText} id="textarea_id" className={TxtColorStyle} readOnly/>
            <div className='keyboard'>
@@ -146,17 +154,23 @@ export default function Game()
                     layoutName={"default"}
                     theme={themeKeyboard}
                    />
-                   <button onClick={StartGame}>START GAME</button>
-                Theme:
+            </div>
+            <div className='empty-sphere'> &nbsp;</div>
+            <Technicbanner/>
+       </div>
+    </div>)
+}
+
+
+
+
+/* 
+
+      Theme:
                 <select
                         value={themeKeyboard}
                         onChange={e => setThemeKeyboard(e.target.value)}>
                         {ThemeKeyboardList.map(o => (
                           <option key={o} value={o}>{o}</option>
                         ))}
-              </select>
-
-            </div>
-       </div>
-    </div>)
-}
+              </select>  */

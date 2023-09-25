@@ -4,7 +4,7 @@
     box-sizing:border-box;
     font-family:HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
     overflow:hidden;
-    padding:5px;
+    padding: 9px;
     touch-action:manipulation;
     -webkit-user-select:none;
     -moz-user-select:none;
@@ -41,7 +41,7 @@
 .hg-theme-default .hg-button{
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     align-items:center;
-    background:radial-gradient(circle, rgba(6, 185, 57, 1) 0%, rgb(1, 128, 49) 100%); /*one button color */
+    background:radial-gradient(circle, rgb(75, 117, 98) 0%, rgb(41, 68, 52) 100%); /*one button color */
     border-bottom:1px solid #b5b5b5;
     border-radius:5px;
     box-shadow:0 0 3px -1px rgba(0,0,0,.3);
@@ -50,7 +50,7 @@
     display:flex;
     height:40px;
     justify-content:center;
-    padding:5px
+    padding:8px
 }
 .hg-theme-default .hg-button.hg-standardBtn{
     width:20px

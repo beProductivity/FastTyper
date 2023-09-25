@@ -2,17 +2,43 @@ body {
     width: 100%;
 }
 
-.typearea {
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game {
     display: flex;
     align-items: center; 
     flex-direction: column;
     justify-content: center;
-
+    border: rgb(150, 255, 209, 0.5) 4px solid;
+    width: 80%;
+    background: radial-gradient(circle, rgba(44,46,47,0.4) 0%, rgba(1,13,20,0.4) 95%); 
+    border-radius: 3em;
+  .hr {
+    height: 4px;
+    background-color: rgba(0, 57, 33, 0.5);
+    border-radius: 0 0 4em 4em;
+    width: 70%;
+  }
+  .empty-sphere {
+    height: 12em;
+  }
     .display_words {
         margin: 0.4rem;
-        width: 70%;
+        width: 50%;
         height: 10rem;
         text-align: center;
+        background-color: rgb(0, 0, 0, 0.5);
+        border-radius: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+        }
     }
     textarea {
         width: 50%;
@@ -25,6 +51,17 @@ body {
    }
 }
 
+.StartButton {
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    font-size: 1.4rem;
+    padding: 2%;
+    border: rgb(4, 76, 27) solid 2px;
+    background-color: white;
+   :hover {
+    font-size: 1rem;
+   }
+}
 .txtArea_Green {
     color: green;
 }

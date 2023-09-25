@@ -1,0 +1,26 @@
+.tech-banner {
+    display: flex;
+    width: 90%;
+    background-color: rgb(0, 0, 0, 0.6);
+    justify-content: space-around;
+    border-radius: 4em 4em 0 0;
+    padding: 1em;
+    .btn {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.2rem;
+        text-align: center;
+        justify-content: center;
+        border-radius: 5em;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.625);
+        color: rgb(255, 255, 255);
+        font-family: 'Press Start 2P', cursive;
+     }
+
+     :hover {
+        background-color: white;
+       color: black;
+     }
+     
+}
