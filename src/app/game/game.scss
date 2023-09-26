@@ -22,13 +22,13 @@ body {
     border-radius: 0 0 4em 4em;
     width: 70%;
   }
-  .empty-sphere {
-    height: 12em;
-  }
+ 
     .display_words {
         margin: 0.4rem;
-        width: 50%;
-        height: 10rem;
+        width: 70%;
+        height: auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
         text-align: center;
         background-color: rgb(0, 0, 0, 0.5);
         border-radius: 2em;
@@ -41,11 +41,11 @@ body {
         }
     }
     textarea {
-        width: 50%;
+        width: 70%;
         font-size: 2rem;
     }
    .keyboard {
-     width: 50%;
+     width: 70%;
      height: 20%;
  
    }

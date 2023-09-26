@@ -9,6 +9,7 @@ import GameTextContentLang from '@/types/Enums/GameTextContentLang';
 import { Userbanner, Technicbanner } from '@/components/game';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { Speedometer } from '@/components/game';
 export default function Game()
 {
   
@@ -31,6 +32,7 @@ export default function Game()
     const [GameIsStarted, setGameIsStarted] = useState<boolean>(false);
     /*To Word system */
     const [wordCounter, setWordCounter] = useState<number>(0);
+    const [maxWords, setMaxWords] = useState<number>(0);
     const [AllWords, setAllWords] = useState<string[]>([]);
     const TxtContent = new GenerateGameTextContent({lineAmount: 8, lineLength: 3, lang: GameTextContentLang.ENG});   
     
@@ -99,6 +101,8 @@ export default function Game()
           try {
             const data = await TxtContent.generate();
             setAllWords((current:string[]) => [...current, data] as any);
+            setMaxWords(data.length)
+          
           } catch (error) {
           console.log(error)
           }
@@ -142,7 +146,7 @@ export default function Game()
        <div className='game'> 
         <span className='hr'/>
         <Userbanner/>
-        <div className='empty-sphere'> &nbsp;</div>
+        <Speedometer maxWords={maxWords} actualPoint={wordCounter}/>
         <div className='display_words'>
             {GameIsStarted 
               ?<h1>{displayedText}</h1>
@@ -155,7 +159,7 @@ export default function Game()
                     theme={themeKeyboard}
                    />
             </div>
-            <div className='empty-sphere'> &nbsp;</div>
+            <br/>
             <Technicbanner/>
        </div>
     </div>)
