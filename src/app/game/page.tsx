@@ -145,7 +145,7 @@ export default function Game()
     <div className='screen'>
        <div className='game'> 
         <span className='hr'/>
-        <Userbanner/>
+        <Userbanner timerIsOn={GameIsStarted}/>
         <Speedometer maxWords={maxWords} actualPoint={wordCounter}/>
         <div className='display_words'>
             {GameIsStarted 
