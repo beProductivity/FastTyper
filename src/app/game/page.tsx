@@ -117,7 +117,10 @@ export default function Game()
           setWordCounter(wordCounter+ 1);
           setDisplayedText(AllWords[0][wordCounter]);
           setWriteText("")
-        } 
+        } else if(WriteText === displayedText && wordCounter === AllWords[0].length) {
+            setGameIsStarted(false);
+            setWriteText("");
+        }
         
       }, [WriteText])
 
