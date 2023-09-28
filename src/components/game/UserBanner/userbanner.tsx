@@ -3,18 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStopwatch, faGear } from '@fortawesome/free-solid-svg-icons';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import { useState, useEffect } from 'react';
-
-interface timer {
-    minutes: number;
-    seconds: number;
-    milliseconds: number;
-}
+import { useDispatch } from 'react-redux';
+import { SetTimeRecord } from '@/redux/slices/TimerSlice';
+import GameTimer from '@/types/game-types/timer-type';
 interface UserBannerProps {
     timerIsOn:boolean;
 }
 export default function Userbanner(props:UserBannerProps) {
-    const [time, setTime] = useState<timer>({ minutes: 0, seconds: 0, milliseconds: 0 });
+    const [time, setTime] = useState<GameTimer>({ minutes: 0, seconds: 0, milliseconds: 0 });
     const TimerStatus = props.timerIsOn;
+
+    const dispatch = useDispatch();
+
     useEffect(() => {
       if(TimerStatus){
         const interval = setInterval(() => {
@@ -22,21 +22,24 @@ export default function Userbanner(props:UserBannerProps) {
             const newMilliseconds = prevTime.milliseconds + 10;
             const newSeconds = prevTime.seconds + Math.floor(newMilliseconds / 1000);
             const newMinutes = prevTime.minutes + Math.floor(newSeconds / 60);
-    
             return {
               minutes: newMinutes % 60,
               seconds: newSeconds % 60,
               milliseconds: newMilliseconds % 1000,
             };
+            
           });
         }, 10);
-    
         return () => clearInterval(interval);
     }
     else {
-        return;
+      dispatch(SetTimeRecord(time));
+
     }
+
+
       }, [TimerStatus]);
+
     return(
         <div className='banner'>
             <div className='level'> 
