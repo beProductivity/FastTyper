@@ -4,16 +4,17 @@ import 'public/assets/keyboard-theme/index.scss';
 import Keyboard from "react-simple-keyboard";
 import { Component, useState, useRef, useEffect } from 'react';
 import GenerateGameTextContent from '@/utils/GameEngine/GenerateGameTextContent';
-import GameTextContentParams from '@/types/GameTextContentParams';
-import GameTextContentLang from '@/types/Enums/GameTextContentLang';
-import { Userbanner, Technicbanner } from '@/components/game';
+import { Userbanner, Technicbanner, Speedometer, PlayerRecord } from '@/components/game';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import { Speedometer } from '@/components/game';
+import { myGame } from '@/utils/StartGame';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
+
 export default function Game()
 {
   
-   
+  
     /*disabled buttons */
     const DisabledKeys:string[] = ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8","F9","F10","F11","F12", "Shift", "Control", "Alt","Enter", "CapsLock", "Tab", "Escape", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Delete", "Home", "End", "PageUp", "PageDown"]; 
      /*Text in text area */
@@ -29,16 +30,18 @@ export default function Game()
     const [TxtColorStyle, setTxtColorStyle ] = useState<string>("txtArea_Red");
    
     /*Game Status */
-    const [GameIsStarted, setGameIsStarted] = useState<boolean>(false);
+    const GameIsStarted= useSelector((state: RootState)=> state.GameMode.GameIsStarted);
     /*To Word system */
     const [wordCounter, setWordCounter] = useState<number>(0);
+    
+    const GameSession = new myGame();
+    const AllWords = useSelector((state: RootState)=> state.Words.words);
     const [maxWords, setMaxWords] = useState<number>(0);
-    const [AllWords, setAllWords] = useState<string[]>([]);
-    const TxtContent = new GenerateGameTextContent({lineAmount: 8, lineLength: 3, lang: GameTextContentLang.ENG});   
     
 
-    
-
+    useEffect(() => {
+      GameSession.GenerateWords()
+    }, [])
     const checkCompatibility = ()=> {
       if(displayedText.includes(WriteText)) {
             setTxtColorStyle("txtArea_Green")
@@ -49,6 +52,12 @@ export default function Game()
        
     }
 
+    const StartGame = async () => {
+         GameSession.Play();
+         setDisplayedText(AllWords[0][1] as string);
+         setMaxWords(AllWords[0].length)
+         
+    }
     useEffect(() => {
         // Funkcja obsługująca zdarzenie klawiatury
         const handleKeyPress = (event: KeyboardEvent) => {
@@ -96,51 +105,21 @@ export default function Game()
 
       }, [themeKeyboard])
 
-      useEffect(() => {
-        const fetchWords = async () => {
-          try {
-            const data = await TxtContent.generate();
-            setAllWords((current:string[]) => [...current, data] as any);
-            setMaxWords(data.length)
-          
-          } catch (error) {
-          console.log(error)
-          }
-        };
-      
-        fetchWords();
-      }, []);
 
       useEffect(()=> {
         if(WriteText === displayedText && wordCounter != AllWords[0].length)
         {
           setWordCounter(wordCounter+ 1);
-          setDisplayedText(AllWords[0][wordCounter]);
+          setDisplayedText(AllWords[0][wordCounter] as string);
           setWriteText("")
         } else if(WriteText === displayedText && wordCounter === AllWords[0].length) {
-            setGameIsStarted(false);
+            GameSession.Stop();
             setWriteText("");
         }
         
       }, [WriteText])
 
-      const StartGame = async () => {
-        try {
-          const data = await TxtContent.generate();
-          setAllWords((current:string[]) => [...current, data] as string[]);
-        } catch (error) {
-        console.log(error)
-        }
-        
-        setGameIsStarted(true);
-        console.log(AllWords);
-        setWordCounter(0);
-        setDisplayedText(AllWords[0][0]);
-        
-      }
-
-    
-      setTimeout(()=>{
+     setTimeout(()=>{
         checkCompatibility();
       }, 10)
     
@@ -149,7 +128,11 @@ export default function Game()
        <div className='game'> 
         <span className='hr'/>
         <Userbanner timerIsOn={GameIsStarted}/>
-        <Speedometer maxWords={maxWords} actualPoint={wordCounter}/>
+        <div className='gamePanel'>
+          <div></div>
+           <Speedometer maxWords={maxWords} actualPoint={wordCounter}/>
+           <div><PlayerRecord trigger={GameIsStarted}/></div>
+        </div>
         <div className='display_words'>
             {GameIsStarted 
               ?<h1>{displayedText}</h1>

@@ -7,8 +7,8 @@ const initialState:GameTimer ={
 }
 
 export const TimerSlice = createSlice({
-    name: 'Accesories', initialState, reducers: {
-        SetTimeRecord: (state, action:PayloadAction<GameTimer>)=> {
+    name: 'Time', initialState, reducers: {
+        SetLastTime: (state, action:PayloadAction<GameTimer>)=> {
             state.minutes = action.payload.minutes;
             state.seconds = action.payload.seconds;
             state.milliseconds = action.payload.milliseconds;
@@ -17,5 +17,5 @@ export const TimerSlice = createSlice({
     }
 });
 
-export const { SetTimeRecord } = TimerSlice.actions;
+export const { SetLastTime } = TimerSlice.actions;
 export default TimerSlice.reducer;

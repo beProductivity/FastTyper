@@ -4,7 +4,8 @@ import { faStopwatch, faGear } from '@fortawesome/free-solid-svg-icons';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { SetTimeRecord } from '@/redux/slices/TimerSlice';
+import { SetLastTime } from '@/redux/slices/TimerSlice';
+
 import GameTimer from '@/types/game-types/timer-type';
 interface UserBannerProps {
     timerIsOn:boolean;
@@ -33,7 +34,7 @@ export default function Userbanner(props:UserBannerProps) {
         return () => clearInterval(interval);
     }
     else {
-      dispatch(SetTimeRecord(time));
+      dispatch(SetLastTime(time));
 
     }
 

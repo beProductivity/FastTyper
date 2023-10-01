@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import TimeReducer from './slices/TimerSlice';
+import GameModeReducer from './slices/ModeSlice';
+import WordsReducer from './slices/GeneratedWordsSlice';
 export const store = configureStore({
     reducer:{
-        time: TimeReducer
+        time: TimeReducer,
+        GameMode: GameModeReducer,
+        Words: WordsReducer
     }
 })
 

@@ -1,0 +1,21 @@
+.record-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+  .trophy {
+    font-size: 2rem;
+    color: rgb(200, 200, 200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .time_record {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+   
+  }
+}

@@ -2,9 +2,9 @@ import generateArrayWithSum from "./GenerateNumbers";
 import GameTextContentParams from "@/types/GameTextContentParams";
 import words from '../words/words.json' assert {type: 'json'};
 
-async function GenerateText(gameParams: GameTextContentParams): Promise<string[]> {
-    const { lineAmount, lineLength, lang } = gameParams;
-    let result: string[] = [];
+function GenerateText(gameParams: GameTextContentParams){
+    const { lineAmount, lineLength } = gameParams;
+    let result:string = "";
     const data = words;
  
     for(let i = 0;i < lineAmount; i++) {
@@ -62,7 +62,7 @@ async function GenerateText(gameParams: GameTextContentParams): Promise<string[]
                 temporaryLineWord += "_"
             }
         }
-        result.push(temporaryLineWord);
+        result = temporaryLineWord;
     }
 
     return result; 
